@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kZbLEtavTuRIhPqiXVcW9zHmLH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/_includes/assets" />
+      <recent name="$PROJECT_DIR$/web/_includes" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="" />
+      <created>1605911003544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605911003544</updated>
+      <workItem from="1605911005396" duration="10419000" />
+    </task>
+    <task id="LOCAL-00001" summary="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there.">
+      <created>1605924637626</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605924637626</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
+    <option name="LAST_COMMIT_MESSAGE" value="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605912013057">
+      <screen x="0" y="23" width="3840" height="2137" />
+    </state>
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1605912013057" />
+    <state x="2618" y="807" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605912626959">
+      <screen x="0" y="23" width="3840" height="2137" />
+    </state>
+    <state x="2618" y="807" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1605912626959" />
+    <state x="2548" y="839" key="EditFileWatcherDialog" timestamp="1605911697824">
+      <screen x="0" y="23" width="3840" height="2137" />
+    </state>
+    <state x="2548" y="839" key="EditFileWatcherDialog/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1605911697824" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1605924640177">
+      <screen x="0" y="23" width="3840" height="2062" />
+    </state>
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1605924640177" />
+  </component>
+</project>
