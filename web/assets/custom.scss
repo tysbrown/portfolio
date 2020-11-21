@@ -1,0 +1,48 @@
+// Custom Bootstrap SASS goes here
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+    (
+      "primary":    #826832,
+//      "secondary":  $secondary,
+//      "success":    $success,
+//      "info":       $info,
+//      "warning":    $warning,
+//      "danger":     $danger,
+//      "light":      $light,
+//      "dark":       $dark
+    ),
+    $theme-colors
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px
+);
+
+
+$body-bg:                   #E5E4DF;
+$body-color:                #000;
+$link-color:                #000;
+
+$headings-font-family:        kepler-std-display, serif;
+$headings-font-weight:        400;
+
+$font-family-sans-serif:      poppins, sans-serif;
+
+$headings-color:              #174036;
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";

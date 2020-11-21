@@ -5,9 +5,24 @@ tags:
 navtitle: Home
 ---
 
-<h1>Latest Posts</h1>
+<span class="h1 text-primary">Hello</span>
 
+<h1>My name's Tyler. I'm a front-end developer in Orlando, Florida. I build bespoke web solutions with Jamstack.</h1>
+
+
+
+<!-- Loops through first 3 iterations of postslist to display 3 most recent blog posts -->
 {% set postslist = collections.myPosts %}
-{% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  {% for post in postslist | reverse %}
+  {% if loop.index0 < 3 %}
+  {% set currentPost = post.data.post %}
+
+    <h2>
+      <a href="{{ post.url | url }}" class="postlist-link">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    </h2>
+    <time class="postlist-date" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
+    {{ currentPost.excerpt | markdownify | safe }}
+
+  {% endif %}
+  {% endfor %}
