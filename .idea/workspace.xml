@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Ran npm install for new dependencies.">
+      <change afterPath="$PROJECT_DIR$/web/assets/selfiephoto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.eleventy.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/.eleventy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_data/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/_data/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_includes/layouts/base.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/_includes/layouts/base.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_includes/layouts/navbar.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/_includes/layouts/navbar.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.njk" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +52,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,6 +60,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assets" />
+      <recent name="$PROJECT_DIR$/web/_site/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
       <recent name="$PROJECT_DIR$/web/_includes/assets" />
@@ -61,7 +78,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605911003544</updated>
-      <workItem from="1605911005396" duration="10419000" />
+      <workItem from="1605911005396" duration="10715000" />
+      <workItem from="1605937082472" duration="27317000" />
     </task>
     <task id="LOCAL-00001" summary="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there.">
       <created>1605924637626</created>
@@ -70,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605924637626</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ran npm install for new dependencies.">
+      <created>1605925100674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605925100674</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,13 +111,19 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
-    <option name="LAST_COMMIT_MESSAGE" value="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there." />
+    <MESSAGE value="Ran npm install for new dependencies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ran npm install for new dependencies." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605981166835">
+      <screen x="0" y="23" width="2048" height="1205" />
+    </state>
+    <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1205@0.23.2048.1205" timestamp="1605981166835" />
     <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605912013057">
       <screen x="0" y="23" width="3840" height="2137" />
     </state>
@@ -105,9 +136,9 @@
       <screen x="0" y="23" width="3840" height="2137" />
     </state>
     <state x="2548" y="839" key="EditFileWatcherDialog/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1605911697824" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1605924640177">
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1605925109359">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1605924640177" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1605925109359" />
   </component>
 </project>

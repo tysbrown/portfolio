@@ -2,12 +2,28 @@ const { DateTime } = require("luxon");
 const util = require('util')
 const CleanCSS = require("clean-css");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const urlFor = require('./utils/imageUrl');
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addShortcode('croppedUrlFor', (image,width,height) => {
+    return urlFor(image)
+      .width(width)
+      .height(height)
+      .auto('format')
+  })
+
+  eleventyConfig.addShortcode('imageUrlFor', (image, width = "400") => {
+    return urlFor(image)
+      .width(width)
+      .auto('format')
+  })
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   eleventyConfig.addPassthroughCopy("*.css");
-  eleventyConfig.addPassthroughCopy("assets/*.css");
+  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("node_modules/bootstrap/scss");
 
   // https://www.11ty.io/docs/quicktips/inline-css/
   eleventyConfig.addFilter("cssmin", function(code) {
@@ -53,7 +69,8 @@ module.exports = function(eleventyConfig) {
       "md",
       "njk",
       "html",
-      "liquid"
+      "liquid",
+      "png"
     ],
 
     // If your site lives in a different subdirectory, change this.

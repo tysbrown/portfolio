@@ -1,4 +1,4 @@
-<nav class="container">
+<nav class="container fixed-top">
   <ul class="nav">
     {%- for nav in collections.nav | reverse -%}
     <li class="nav-link{% if nav.url == page.url %} active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>

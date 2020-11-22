@@ -4,7 +4,7 @@ $theme-colors: () !default;
 $theme-colors: map-merge(
     (
       "primary":    #826832,
-//      "secondary":  $secondary,
+      "secondary":  #174036,
 //      "success":    $success,
 //      "info":       $info,
 //      "warning":    $warning,
@@ -32,6 +32,22 @@ $container-max-widths: (
   xxl: 1400px
 );
 
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+    (
+      0: 0,
+      1: ($spacer * .25),
+      2: ($spacer * .5),
+      3: $spacer,
+      4: ($spacer * 1.5),
+      5: ($spacer * 3),
+      6: ($spacer * 6),
+      7: ($spacer * 15)
+    ),
+    $spacers
+);
+
 
 $body-bg:                   #E5E4DF;
 $body-color:                #000;
@@ -39,10 +55,13 @@ $link-color:                #000;
 
 $headings-font-family:        kepler-std-display, serif;
 $headings-font-weight:        400;
+$headings-line-height:        1;
 
 $font-family-sans-serif:      poppins, sans-serif;
 
 $headings-color:              #174036;
+
+$enable-responsive-font-sizes:  true;
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
