@@ -1,10 +1,31 @@
 ---
 layout: layouts/home.njk
-navtitle: Archive
+eleventyNavigation:
+  key: Blog
+  order: 4
 permalink: /posts/
 ---
+<div class="row">
+  <div class="col-12 px-0">
+    <h1 class="h1 mt-6 mb-5 display-4 text-primary">Case Studies and Articles</h1>
+  </div>
+</div>
 
-<h1>Archive</h1>
 
 {% set postslist = collections.myPosts %}
-{% include "postslist.njk" %}
+{% for post in postslist | reverse %}
+{% set currentPost = post.data.post %}
+<div class="row mt-lg-3 mt-5">
+  <div class="col-lg-3 p-lg-0">
+    <a href="{{ post.url | url }}"><img src="{% croppedUrlFor currentPost.mainImage, 300, 250 %}" alt="{{ currentPost.mainImage.alt }}" width="100%"></a>
+  </div>
+  <div class="col-lg-9 mt-lg-0 mt-3 d-flex flex-column justify-content-center">
+    <h2>
+      <a href="{{ post.url | url }}" class="text-secondary">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    </h2>
+    <time class="small font-weight-light" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
+    {{ currentPost.excerpt | markdownify | safe }}
+    <a href="{{ post.url | url }}" class="text-uppercase">Read More →</a>
+  </div>
+</div>
+{% endfor %}

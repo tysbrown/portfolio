@@ -9,7 +9,7 @@ $theme-colors: map-merge(
 //      "info":       $info,
 //      "warning":    $warning,
 //      "danger":     $danger,
-//      "light":      $light,
+      "light":      #E5E4DF,
 //      "dark":       $dark
     ),
     $theme-colors
@@ -48,6 +48,7 @@ $spacers: map-merge(
     $spacers
 );
 
+$display2-size:               9rem;
 
 $body-bg:                   #E5E4DF;
 $body-color:                #000;

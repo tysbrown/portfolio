@@ -1,0 +1,9 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Portfolio
+  order: 3
+---
+{% for portfolioProject in portfolioProject.portfolioProject %}
+{{ portfolioProject.portfolioProject }}
+{% endfor %}

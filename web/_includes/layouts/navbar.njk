@@ -1,7 +1,18 @@
-<nav class="container fixed-top">
-  <ul class="nav">
-    {%- for nav in collections.nav | reverse -%}
-    <li class="nav-link{% if nav.url == page.url %} active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
-    {%- endfor -%}
-  </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container px-0">
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
+      {% set navPages = collections.all | eleventyNavigation %}
+      <ul class="navbar-nav mobile-vh vw-100">
+        {%- for entry in navPages %}
+        <li class="px-0 mr-5 text-uppercase nav-link{% if entry.url == page.url %} active{% endif %}">
+          <a href="{{ entry.url | url }}" class="nav-link px-0">{{ entry.title }}</a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
 </nav>
+

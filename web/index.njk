@@ -1,21 +1,21 @@
 ---
 layout: layouts/home.njk
-tags:
-  - nav
-navtitle: Home
+eleventyNavigation:
+  key: Home
+  order: 1
 ---
-
-
-
 <div class="row flex-lg-row flex-column-reverse justify-content-center vh-100">
   <div class="col-lg-7 p-lg-0 d-flex flex-column justify-content-center" style="z-index: 2;">
-    <span class="h1 text-primary d-lg-flex d-none">Hello</span>
-    <h1 class="display-3 my-lg-5 mb-3 mt-n3 mr-lg-n300">My name's Tyler. I'm a front-end developer in Orlando, Florida. I build bespoke web solutions with Jamstack.</h1>
-    <p class="font-weight-light subheader-text d-lg-block d-none">I deliver modern, future-proof web solutions. I work with static site generators and headless content management systems to build each client a web presence that is fast, modern, and as unique as the business it’s made for.</p>
+    <span class="h1 text-primary mt-lg-0 mt-4 text-lg-left text-center">Hello</span>
+    <h1 class="display-3 my-lg-5 my-4 mr-lg-n200 text-lg-left text-center header-toggle">{{ index.header }}</h1>
+    <p class="font-weight-light subheader-text text-lg-left text-center">{{ index.subheader }}</p>
   </div>
   <div class="col-lg-5 p-0 d-flex flex-lg-row align-items-center flex-column">
-    <span class="h1 text-primary d-lg-none align-self-start ml-3 display-1 mb-n3" style="z-index:2;">Hello</span>
-    <img src="assets/selfiephoto.png" class="img-fluid img-size-toggle">
+    <picture class="d-flex justify-content-center">
+      <source media="(max-width: 992px)" srcset="assets/tbdmobileselfie.png">
+      <source media="(min-width: 993px)" srcset="assets/selfiephoto.png">
+      <img src="assets/selfiephoto.png" alt="Tyler Brown standing in suit" class="img-fluid img-size-toggle">
+    </picture>
   </div>
 </div>
 
@@ -25,26 +25,77 @@ navtitle: Home
   </div>
 </div>
 
-<div class="row mb-5">
-  <div class="col-12 p-lg-0 border-bottom border-dark">
-    <a href="#" class="h1 display-1 text-secondary">Leanne Brown Eventing</a>
-    <p class="my-5">Landing Page built with 11ty, Bootstrap, Sass, GSAP, and Sanity Studio using GROQ and JavaScript.</p>
-  </div>
-</div>
 
-<div class="row mb-5">
-  <div class="col-12 p-lg-0 border-bottom border-dark">
-    <a href="#" class="h1 display-1 text-secondary">Headless eCommerce</a>
-    <p class="my-5">Online store built with 11ty, Bootstrap, Sass, GSAP, and Shopify’s Storefront API using GraphQL and JavaScript.</p>
-  </div>
-</div>
+{% for portfolioProject in portfolioProject.portfolioProject %}
+{{ portfolioProject.name }}
+{% endfor %}
 
-<div class="row mb-5">
-  <div class="col-12 p-lg-0 border-bottom border-dark">
-    <a href="#" class="h1 display-1 text-secondary">Restaurant Site</a>
-    <p class="my-5">Restaurant web app built with 11ty, Bootstrap, Sass, GSAP, and Sanity Studio using GROQ and JavaScript.</p>
+<!-- Selected Works Accordion -->
+<div class="accordion" id="portfolioAccordion">
+  <div class="row mb-5">
+    <div class="col-12 p-lg-0 border-bottom border-dark">
+      <a href="#firstItem" data-toggle="collapse" class="h1 display-1 text-secondary">Leanne Brown Eventing</a>
+      <p class="my-5">Landing Page built with 11ty, Bootstrap, Sass, GSAP, and Sanity Studio using GROQ and JavaScript.</p>
+      <div class="collapse container-fluid" id="firstItem" data-parent="#portfolioAccordion">
+        <div class="row mb-5">
+          <div class="col-lg-5 px-0">
+            <a href="#"><img src="assets/LBEHomepageShot.png" width="100%"></a>
+          </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
+            <h2>Simplistic and Aesthetic</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <a href="#" class="text-uppercase">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 p-lg-0 border-bottom border-dark">
+      <a href="#secondItem" data-toggle="collapse" class="h1 display-1 text-secondary">Headless eCommerce</a>
+      <p class="my-5">Online store built with 11ty, Bootstrap, Sass, GSAP, and Shopify’s Storefront API using GraphQL and JavaScript.</p>
+      <div class="collapse container-fluid" id="secondItem" data-parent="#portfolioAccordion">
+        <div class="row mb-5">
+          <div class="col-lg-5 px-0">
+            <a href="#"><img src="assets/LBEHomepageShot.png" width="100%"></a>
+          </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
+            <h2>Simplistic and Aesthetic</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <a href="#" class="text-uppercase">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 p-lg-0 border-bottom border-dark">
+      <a href="#thirdItem" data-toggle="collapse" class="h1 display-1 text-secondary">Restaurant Site</a>
+      <p class="my-5">Restaurant web app built with 11ty, Bootstrap, Sass, GSAP, and Sanity Studio using GROQ and JavaScript.</p>
+      <div class="collapse container-fluid" id="thirdItem" data-parent="#portfolioAccordion">
+        <div class="row mb-5">
+          <div class="col-lg-5 px-0">
+            <a href="#"><img src="assets/LBEHomepageShot.png" width="100%"></a>
+          </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
+            <h2>Simplistic and Aesthetic</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <a href="#" class="text-uppercase">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<!-- Selected Works Accordion End -->
 
 <div class="row mb-5 mt-lg-7 mt-6">
   <div class="col-12 p-lg-0">
@@ -59,11 +110,11 @@ navtitle: Home
 {% set currentPost = post.data.post %}
 <div class="row mt-lg-3 mt-5">
   <div class="col-lg-3 p-lg-0">
-    <img src="{% croppedUrlFor currentPost.mainImage, 300, 250 %}" alt="{{ currentPost.mainImage.alt }}" width="100%">
+    <a href="{{ post.url | url }}"><img src="{% croppedUrlFor currentPost.mainImage, 300, 250 %}" alt="{{ currentPost.mainImage.alt }}" width="100%"></a>
   </div>
   <div class="col-lg-9 mt-lg-0 mt-3 d-flex flex-column justify-content-center">
     <h2>
-      <a href="{{ post.url | url }}" class="text-secondary display-4">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+      <a href="{{ post.url | url }}" class="text-secondary">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
     </h2>
     <time class="small font-weight-light" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
     {{ currentPost.excerpt | markdownify | safe }}
@@ -81,7 +132,7 @@ navtitle: Home
 
 <div class="row my-5">
   <div class="col-12 p-lg-0">
-    <p class="h1 display-1 text-secondary">If you're interested in hiring me for a freelance project, please <a href="#" class="text-secondary" style="text-decoration: underline;">fill out this form.</a></p>
+    <p class="h1 display-2 text-secondary">If you're interested in hiring me for a freelance project, please <a href="#" class="text-secondary" style="text-decoration: underline;">fill out this form.</a></p>
     <span class="text-right d-flex flex-column align-items-end">
       <p class="h1 text-secondary mt-5">For all other inquires:</p>
       <a href="#" class="h1 display-4 text-secondary" style="text-decoration: underline;">hello@tylerbrowndev.com</a>
