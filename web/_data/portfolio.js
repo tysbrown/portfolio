@@ -17,7 +17,8 @@ async function getProjects () {
   const docs = await client.fetch(filter).catch(err => console.error(err))
   const genProject = docs.map(generateProject)
   const reducedProject = overlayDrafts(hasToken, genProject)
-  return reducedProject[0]
+  console.log(reducedProject);
+  return reducedProject
 }
 
 module.exports = getProjects

@@ -4,6 +4,8 @@ eleventyNavigation:
   key: Portfolio
   order: 3
 ---
-{% for portfolioProject in portfolioProject.portfolioProject %}
-{{ portfolioProject.portfolioProject }}
+
+{% for portfolio in portfolio %}
+  <h1 class="mt-6">{{ portfolio.name }}</h1>
+  {{ portfolio.body | markdownify | safe }}
 {% endfor %}

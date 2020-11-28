@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Building schemas and pulling in data from Sanity into 11ty frontend.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_data/portfolioProjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/_data/portfolio.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/portfolio.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
