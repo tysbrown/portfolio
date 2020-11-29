@@ -25,7 +25,9 @@ eleventyNavigation:
   </div>
 </div>
 
-{{ index.selectedWorks }}
+{% for portfolio in index.selectedWorks %}
+  {{ portfolio.name }}
+{% endfor %}
 
 <!-- Selected Works Accordion -->
 <div class="accordion" id="portfolioAccordion">
