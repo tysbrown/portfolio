@@ -5,7 +5,12 @@ module.exports =  async function() {
   const query = await client.fetch(groq`
     *[_type == "homepage"]{
       ...,
-      selectedWorks->
+      selectedWorks[]->{
+        name,
+        slug,
+        image,
+        projectExcerpt
+      }
     }[0]
   `);
   console.log(query);
