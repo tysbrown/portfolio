@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Fixed portfolio query.">
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Added excerpt field to portfolioProject schema.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studio/schemas/documents/portfolioProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/studio/schemas/documents/portfolioProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606606402303</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added excerpt field to portfolioProject schema.">
+      <created>1606609217941</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606609217941</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +158,8 @@
     <MESSAGE value="Building out the homepage." />
     <MESSAGE value="Building schemas and pulling in data from Sanity into 11ty frontend." />
     <MESSAGE value="Fixed portfolio query." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed portfolio query." />
+    <MESSAGE value="Added excerpt field to portfolioProject schema." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added excerpt field to portfolioProject schema." />
   </component>
   <component name="WindowStateProjectService">
     <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605981166835">
@@ -173,11 +182,11 @@
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="534" y="1004" key="SettingsEditor/0.23.3840.2062@0.23.3840.2062" timestamp="1606202869786" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1606606403811">
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1606609219536">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="2480" y="793" key="Vcs.Push.Dialog.v2/-1440.1573.1440.900/0.0.3840.2160@0.0.3840.2160" timestamp="1606079121463" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1606606403811" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1606609219536" />
     <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup" timestamp="1606195825049">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>

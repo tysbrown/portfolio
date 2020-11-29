@@ -15,7 +15,7 @@ export default {
     },
     {
       name: 'projectExcerpt',
-      type: 'bodyPortableText',
+      type: 'text',
       title: 'Excerpt'
     },
     {
