@@ -14,6 +14,11 @@ export default {
       title: 'Image'
     },
     {
+      name: 'projectExcerpt',
+      type: 'bodyPortableText',
+      title: 'Excerpt'
+    },
+    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'
