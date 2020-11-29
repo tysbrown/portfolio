@@ -13,11 +13,12 @@ function generateProject (project) {
 }
 
 async function getProjects () {
-  const filter = groq`*[_type == "portfolioProject"]`
+  const filter = groq`*[_type == "portfolioProject"] | order(publishedAt asc) {
+  ...,
+  }`
   const docs = await client.fetch(filter).catch(err => console.error(err))
   const genProject = docs.map(generateProject)
   const reducedProject = overlayDrafts(hasToken, genProject)
-  console.log(reducedProject);
   return reducedProject
 }
 

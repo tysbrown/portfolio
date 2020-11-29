@@ -9,10 +9,10 @@ module.exports =  async function() {
         name,
         slug,
         image,
+        stack,
         projectExcerpt
       }
     }[0]
   `);
-  console.log(query);
   return query;
 }

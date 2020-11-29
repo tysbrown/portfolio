@@ -4,3 +4,18 @@ eleventyNavigation:
   key: About
   order: 2
 ---
+
+<div class="row align-items-center vh-100">
+  <div class="col-lg-9 pl-lg-0 pl-3 border border-dark">
+    <h1 class="mb-5 display-4 text-primary">{{ about.title }}</h1>
+    <h2 class="h1 mb-5 display-4">{{ about.header }}</h2>
+    <p class="font-weight-light subheader-text">{{ about.subheader }}</p>
+  </div>
+  <div class="col-lg-3 pr-lg-0 pr-3 border border-dark">
+    <img src="{% imageUrlFor about.image, 500 %}" alt="{{ about.image.alt }}" width="100%">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">{{ about.body | markdownify | safe }}</div>
+</div>

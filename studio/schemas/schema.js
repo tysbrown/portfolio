@@ -11,6 +11,7 @@ import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import portfolioProject from './documents/portfolioProject'
 import homepage from './documents/homepage'
+import about from "./documents/about";
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -28,6 +29,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    about,
     homepage,
     portfolioProject,
     siteSettings,

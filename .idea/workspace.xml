@@ -19,11 +19,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Messing with for loop for selectedWorks">
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Building accordion with Sanity data.">
+      <change afterPath="$PROJECT_DIR$/studio/schemas/documents/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/_data/about.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio/deskStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/studio/deskStructure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/studio/schemas/documents/portfolioProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/studio/schemas/documents/portfolioProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio/schemas/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/studio/schemas/schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/_data/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/_data/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_data/portfolio.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/_data/portfolio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/about.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/about.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/archive.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/archive.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/portfolio.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606611668963</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Building accordion with Sanity data.">
+      <created>1606615199069</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606615199069</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +193,8 @@
     <MESSAGE value="Fixed portfolio query." />
     <MESSAGE value="Added excerpt field to portfolioProject schema." />
     <MESSAGE value="Messing with for loop for selectedWorks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Messing with for loop for selectedWorks" />
+    <MESSAGE value="Building accordion with Sanity data." />
+    <option name="LAST_COMMIT_MESSAGE" value="Building accordion with Sanity data." />
   </component>
   <component name="WindowStateProjectService">
     <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605981166835">
@@ -198,11 +217,11 @@
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="534" y="1004" key="SettingsEditor/0.23.3840.2062@0.23.3840.2062" timestamp="1606202869786" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1606611670130">
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1606615200364">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="2480" y="793" key="Vcs.Push.Dialog.v2/-1440.1573.1440.900/0.0.3840.2160@0.0.3840.2160" timestamp="1606079121463" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1606611670130" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1606615200364" />
     <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup" timestamp="1606195825049">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>

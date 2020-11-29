@@ -12,11 +12,17 @@ export default {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
-      description: 'Some frontends will require a slug to be set to be able to show the post',
+      description: 'Slug must be set to display project in the Selected Works section of the homepage.',
       options: {
         source: 'name',
         maxLength: 96
       }
+    },
+    {
+      name: 'publishedAt',
+      type: 'datetime',
+      title: 'Published at',
+      description: 'This can be used to schedule a post for publishing.'
     },
     {
       name: 'image',
@@ -24,9 +30,15 @@ export default {
       title: 'Image'
     },
     {
+      name: 'stack',
+      type: 'string',
+      title: 'Tech Stack Description'
+    },
+    {
       name: 'projectExcerpt',
       type: 'text',
-      title: 'Excerpt'
+      title: 'Excerpt',
+      description: 'This text will be displayed in the Selected Works section of the homepage.'
     },
     {
       name: 'body',
