@@ -17,7 +17,6 @@ async function getPage () {
   const docs = await client.fetch(filter).catch(err => console.error(err))
   const genPage = docs.map(generatePage)
   const reducedPage = overlayDrafts(hasToken, genPage)
-  console.log(reducedPage);
   return reducedPage[0]
 }
 

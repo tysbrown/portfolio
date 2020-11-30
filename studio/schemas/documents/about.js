@@ -22,11 +22,6 @@ export default {
       description: 'Type the text that will go below the main header.'
     },
     {
-      name: 'image',
-      type: 'mainImage',
-      title: 'Homepage Image'
-    },
-    {
       name: 'body',
       type: 'bodyPortableText',
       title: 'Body'

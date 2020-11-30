@@ -4,3 +4,71 @@ eleventyNavigation:
   key: Hire Me
   order: 5
 ---
+<div class="row">
+  <div class="col-12 px-lg-0 px-3">
+    <h1 class="h1 mt-6 mb-5 display-4 text-primary">Submit a Freelance Web Project</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 px-lg-0 px-3">
+    <h2 class="display-3">I am currently accepting new clients for freelance web projects. If you have a project you’d like to hire me for, use the form below to send me a message with the details and I will be in touch with a proposal.</h2>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-12 px-lg-0 px-3">
+    <form>
+      <div class="row">
+        <div class="col-lg-6">
+          <label for="firstname" class="text-uppercase">First Name</label>
+          <input type="text" class="form-control" id="firstname">
+        </div>
+        <div class="col-lg-6">
+          <label for="lastname" class="text-uppercase mt-lg-0 mt-4">Last Name</label>
+          <input type="text" class="form-control" id="lastname">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <label for="emailaddress" class="text-uppercase">Email Address</label>
+          <input type="email" class="form-control" id="emailaddress">
+        </div>
+        <div class="col-lg-6">
+          <label for="reemailaddress" class="text-uppercase mt-lg-0 mt-4">Re-Enter Email Address</label>
+          <input type="email" class="form-control" id="reemailaddress">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6">
+          <label for="projecttype" class="text-uppercase">Type of Project</label>
+          <select class="custom-select" id="projecttype" required>
+            <option selected disabled value="">Choose...</option>
+            <option>Marketing Site</option>
+            <option>eCommerce App</option>
+            <option>Migration to JAMstack</option>
+            <option>Other (Explain in message)</option>
+          </select>
+        </div>
+        <div class="col-lg-6">
+          <label for="budget" class="text-uppercase mt-lg-0 mt-4">Budget</label>
+          <input type="text" class="form-control" id="budget" placeholder="$0.00">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <label for="scope" class="text-uppercase">Project Scope & Requirements</label>
+          <textarea class="form-control" id="scope" rows="10" placeholder="Please provide an overview of requirements known at this time."></textarea>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <label for="message" class="text-uppercase">Message</label>
+          <textarea class="form-control" id="message" rows="10"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-dark text-uppercase mt-4">Send</button>
+    </form>
+  </div>
+</div>
+
+
+

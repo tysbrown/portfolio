@@ -24,7 +24,7 @@ export default () =>
         ),
       S.listItem()
         .title("About Page")
-        .icon(MdHome)
+        .icon(MdPerson)
         .child(
           S.editor()
             .id('about')
@@ -32,20 +32,15 @@ export default () =>
             .documentId("singleton-about")
         ),
       S.listItem()
-        .title('Blog')
-        .icon(MdBook)
-        .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
-      S.listItem()
         .title('Portfolio Projects')
         .icon(MdDescription)
         .schemaType('portfolioProject')
         .child(S.documentTypeList('portfolioProject').title('Portfolio Projects')),
       S.listItem()
-        .title('Authors')
-        .icon(MdPerson)
-        .schemaType('author')
-        .child(S.documentTypeList('author').title('Authors')),
+        .title('Blog')
+        .icon(MdBook)
+        .schemaType('post')
+        .child(S.documentTypeList('post').title('Blog posts')),
       S.listItem()
         .title('Categories')
         .icon(MdLabel)

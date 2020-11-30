@@ -6,7 +6,7 @@ eleventyNavigation:
 ---
 <div class="row">
   <div class="col-12 px-lg-0 px-3">
-    <h1 class="h1 mt-6 mb-6 display-4 text-primary">Portfolio</h1>
+    <h1 class="h1 mt-6 mb-5 display-4 text-primary">Portfolio</h1>
   </div>
 </div>
 {% for portfolio in portfolio %}
@@ -21,11 +21,15 @@ eleventyNavigation:
   </div>
 </div>
 <div class="row border-bottom border-dark pb-6 mb-6">
-  <div class="col-lg-4 pl-lg-0 pl-3">
-    <img src="{% imageUrlFor portfolio.image, 700 %}" alt="portfolio.image.alt" width="100%">
-  </div>
-  <div class="col-lg-8 pr-lg-0 pr-3">
+  <div class="col-12 px-lg-0 px-3">
+    <span class="d-flex justify-content-center w-100 mb-5">
+      <img src="{% imageUrlFor portfolio.image, 700 %}" alt="portfolio.image.alt" class="img-fluid">
+    </span>
+    <h2>Project Overview</h2>
     {{ portfolio.body | markdownify | safe }}
+    <a href="#" class="text-uppercase">Read Case Study →</a>
   </div>
 </div>
 {% endfor %}
+
+

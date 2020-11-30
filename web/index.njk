@@ -35,7 +35,7 @@ eleventyNavigation:
       <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
         <div class="row mb-5">
           <div class="col-lg-4 px-0">
-            <a href="#"><img src="{% imageUrlFor portfolioProject.image, 700 %}" alt="{{ portfolioProject.image.alt }}" width="100%"></a>
+            <a href="/portfolio/#{{ portfolioProject.slug.current }}"><img src="{% imageUrlFor portfolioProject.image, 700 %}" alt="{{ portfolioProject.image.alt }}" width="100%"></a>
           </div>
           <div class="col-lg-8 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
             <h2>Project Overview</h2>
@@ -87,7 +87,7 @@ eleventyNavigation:
 
 <div class="row my-5">
   <div class="col-12 p-lg-0">
-    <p class="h1 display-2 text-secondary">If you're interested in hiring me for a freelance project, please <a href="#" class="text-secondary" style="text-decoration: underline;">fill out this form.</a></p>
+    <p class="h1 display-1 text-secondary">If you're interested in hiring me for a freelance project, please <a href="#" class="text-secondary" style="text-decoration: underline;">fill out this form.</a></p>
     <span class="text-right d-flex flex-column align-items-end">
       <p class="h1 text-secondary mt-5">For all other inquires:</p>
       <a href="#" class="h1 display-4 text-secondary" style="text-decoration: underline;">hello@tylerbrowndev.com</a>
