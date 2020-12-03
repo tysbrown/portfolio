@@ -4,18 +4,16 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<div class="row flex-lg-row flex-column-reverse justify-content-center vh-100 banner">
+<div class="row banner">
   <div class="col-lg-7 p-lg-0 d-flex flex-column justify-content-center" style="z-index: 2;">
-    <span class="h1 text-primary mt-lg-0 mt-4 text-lg-left text-center">Hello</span>
-    <h1 class="display-3 my-lg-5 my-4 mr-lg-n200 text-lg-left text-center header-toggle">{{ index.header }}</h1>
-    <p class="font-weight-light subheader-text text-lg-left text-center">{{ index.subheader }}</p>
+    <span class="h1 text-primary mt-lg-0 mt-6">Hello</span>
+    <h1 class="display-3 my-lg-5 my-4 mr-lg-n200 header-toggle">{{ index.header }}</h1>
+    <div class="subheader-wrapper">
+      <p class="font-weight-light subheader-text">{{ index.subheader }}</p>
+    </div>
   </div>
-  <div class="col-lg-5 p-0 d-flex flex-lg-row align-items-center flex-column">
-    <picture class="d-flex justify-content-center">
-      <source media="(max-width: 992px)" srcset="assets/tbdmobileselfie.png">
-      <source media="(min-width: 993px)" srcset="assets/selfiephoto.png">
-      <img src="assets/selfiephoto.png" alt="Tyler Brown standing in suit" class="img-fluid img-size-toggle">
-    </picture>
+  <div class="col-lg-5 px-lg-0 px-3 d-flex flex-lg-row align-items-center flex-column">
+    <img src="assets/selfiephoto.png" class="img-fluid">
   </div>
 </div>
 
@@ -29,28 +27,30 @@ eleventyNavigation:
 <div class="accordion" id="portfolioAccordion">
   {% for portfolioProject in index.selectedWorks %}
   <div class="row mb-5">
-    <div class="col-12 p-lg-0 border-bottom border-dark">
-      <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="h1 display-1 text-secondary">{{ portfolioProject.name }}</a>
-      <p class="my-5">{{ portfolioProject.stack }}</p>
-      <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
-        <div class="row mb-5">
-          <div class="col-lg-4 px-0">
-            <a href="/portfolio/#{{ portfolioProject.slug.current }}"><img src="{% imageUrlFor portfolioProject.image, 700 %}" alt="{{ portfolioProject.image.alt }}" width="100%"></a>
-          </div>
-          <div class="col-lg-8 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
-            <h2>Project Overview</h2>
-            <p>
-              {{ portfolioProject.projectExcerpt }}
-            </p>
-            <span>
+    <div class="col-12 p-lg-0">
+      <div class="border-bottom border-dark">
+        <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="h1 display-1 text-secondary">{{ portfolioProject.name }}</a>
+        <p class="my-5">{{ portfolioProject.stack }}</p>
+        <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
+          <div class="row mb-5">
+            <div class="col-lg-4 px-0">
+              <a href="/portfolio/#{{ portfolioProject.slug.current }}"><img src="{% imageUrlFor portfolioProject.image, 700 %}" alt="{{ portfolioProject.image.alt }}" width="100%"></a>
+            </div>
+            <div class="col-lg-8 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
+              <h2>Project Overview</h2>
+              <p>
+                {{ portfolioProject.projectExcerpt }}
+              </p>
+              <span>
               <i class="fas fa-chevron-right mr-2"></i><a href="/portfolio/#{{ portfolioProject.slug.current }}" class="text-uppercase">Read More</a>
             </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>
 <!-- Selected Works Accordion End -->
 
@@ -89,9 +89,11 @@ eleventyNavigation:
   </div>
 </div>
 
-<div class="row my-5 pb-5 border-bottom border-dark">
+<div class="row my-5">
   <div class="col-12 px-lg-0 px-3">
+    <div class="border-bottom border-dark pb-5">
     <p class="h1 display-1 text-secondary">Want to start a web project? I'd love to hear from you.</p>
+    </div>
   </div>
 </div>
 <div class="row">
