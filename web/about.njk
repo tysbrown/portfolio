@@ -5,16 +5,16 @@ eleventyNavigation:
   order: 2
 ---
 
-<div class="row mt-6">
-  <div class="col-lg-9 pl-lg-0 pl-3">
-    <h1 class="mb-5 display-4 text-primary">{{ about.title }}</h1>
+<div class="row mt-lg-7 mt-6">
+  <div class="col-lg-9 pl-lg-0 pl-3 pr-lg-5 pr-3">
+    <h1 class="mb-5 display-3 text-primary">{{ about.title }}</h1>
     <h2 class="mb-5 display-3">{{ about.header }}</h2>
     <p class="mb-5">{{ about.subheader }}</p>
-    <span class="about-section">
+    <div class="about-section border-top border-dark">
       {{ about.body | markdownify | safe }}
-    </span>
+    </div>
   </div>
-  <div class="col-lg-3 pr-lg-0 pr-3 mt-lg-0 mt-5">
+  <div class="col-lg-3 border-left border-dark pl-lg-5 pl-3 pr-lg-0 pr-3 mt-lg-0 mt-5">
     <h1>Skills and Tools</h1>
     <ul>
       {% set x = 0 %}

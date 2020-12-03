@@ -13,7 +13,7 @@ function generateProject (project) {
 }
 
 async function getProjects () {
-  const filter = groq`*[_type == "portfolioProject"] | order(publishedAt asc) {
+  const filter = groq`*[_type == "portfolioProject"] | order(_createdAt desc) {
   ...,
   }`
   const docs = await client.fetch(filter).catch(err => console.error(err))

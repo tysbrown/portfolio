@@ -49,6 +49,7 @@ $spacers: map-merge(
 );
 
 $display2-size:               9rem;
+$display4-size:               2rem;
 
 $body-bg:                   #E5E4DF;
 $body-color:                #000;
@@ -70,5 +71,6 @@ $card-bg:                     #E5E4DF;
 
 $input-bg:                    #D9D7D0;
 $input-border-width:          0;
+$input-btn-font-size:         0.8rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";

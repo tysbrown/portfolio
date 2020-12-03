@@ -2,11 +2,17 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<div class="row">
+<div class="row justify-content-center">
   <div class="col-12 px-lg-0 px-3">
-    <h1 class="display-4 mt-6 mb-5 text-primary">{{ post.title }}</h1>
-    <span class="post-body">
-    {{ post.body | markdownify | safe }}
-  </span>
+    <h1 class="display-3 mt-lg-7 mt-6 mb-5 text-primary text-center">{{ post.title }}</h1>
+    <span class=" d-flex justify-content-center w-100">
+      <img src="{% imageUrlFor post.mainImage, 600 %}" alt="{{ post.mainImage.alt }}" class="img-fluid rounded-lg">
+    </span>
+    <p class="my-5">
+      <time class="small font-weight-light" datetime="{{ post.publishedAt }}">Last Edited {{ post.publishedAt|readableDate }}</time>
+    </p>
+    <div class="post-body mt-5">
+      {{ post.body | markdownify | safe }}
+    </div>
   </div>
 </div>

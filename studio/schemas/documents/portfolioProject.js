@@ -9,6 +9,11 @@ export default {
       title: 'Name'
     },
     {
+      name: 'siteLink',
+      type: 'string',
+      title: 'Site Link'
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
