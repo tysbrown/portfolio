@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Finished polishing mobile view.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/style.css" afterDir="false" />
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Fixing mobile view bug on portfolio page causing image to stretch vertically.">
       <change beforePath="$PROJECT_DIR$/web/portfolio.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +81,7 @@
       <workItem from="1606161766531" duration="6799000" />
       <workItem from="1606311081879" duration="1268000" />
       <workItem from="1606321376091" duration="29371000" />
-      <workItem from="1606704847657" duration="31397000" />
+      <workItem from="1606704847657" duration="31931000" />
     </task>
     <task id="LOCAL-00001" summary="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there.">
       <created>1605924637626</created>
@@ -204,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607023827274</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixing mobile view bug on portfolio page causing image to stretch vertically.">
+      <created>1607026422193</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607026422193</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +243,8 @@
     <MESSAGE value="Finished building out interior pages and ironing everything out." />
     <MESSAGE value="Fixed issue with portfolio images." />
     <MESSAGE value="Finished polishing mobile view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished polishing mobile view." />
+    <MESSAGE value="Fixing mobile view bug on portfolio page causing image to stretch vertically." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing mobile view bug on portfolio page causing image to stretch vertically." />
   </component>
   <component name="WindowStateProjectService">
     <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605981166835">
@@ -266,12 +272,12 @@
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="534" y="1004" key="SettingsEditor/0.23.3840.2062@0.23.3840.2062" timestamp="1606202869786" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1607023828569">
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1607026423671">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="2480" y="793" key="Vcs.Push.Dialog.v2/-1440.1573.1440.900/0.0.3840.2160@0.0.3840.2160" timestamp="1606079121463" />
     <state x="2340" y="808" key="Vcs.Push.Dialog.v2/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1607008197067" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1607023828569" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1607026423671" />
     <state x="1248" y="470" key="Vcs.Push.Dialog.v2/0.0.2048.1280@0.0.2048.1280" timestamp="1606710919076" />
     <state x="2340" y="780" key="Vcs.Push.Dialog.v2/0.23.3840.2062@0.23.3840.2062" timestamp="1606770484020" />
     <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup" timestamp="1606195825049">

@@ -24,9 +24,9 @@ templateClass: tmpl-portfolio
 <div class="row mb-6">
   <div class="col-12 px-lg-0 px-3">
     <div class="border-bottom border-dark pb-6">
-    <div class="d-flex justify-content-center w-100 mb-5">
-      <img src="{% imageUrlFor portfolio.image, 700 %}" alt="portfolio.image.alt" class="img-fluid">
-    </div>
+      <div class="d-flex justify-content-center w-100 mb-5">
+        <img src="{% imageUrlFor portfolio.image %}" alt="portfolio.image.alt" class="img-fluid">
+      </div>
     <h2>Project Overview</h2>
     {{ portfolio.body | markdownify | safe }}
     </div>
