@@ -7,10 +7,11 @@
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
       {# <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}"> #}
     <link rel="stylesheet" href="https://use.typekit.net/bxq4xpa.css">
-    <link rel="stylesheet" href="/assets/custom.css">
+
     <script src="https://kit.fontawesome.com/310347b186.js" crossorigin="anonymous" async></script>
     {% set css %}
       {% include "assets/style.css" %}
+      {% include "assets/custom.css" %}
     {% endset %}
     <style>
       {{ css | cssmin | safe }}
