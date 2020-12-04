@@ -1,3 +1,7 @@
+@font-face {
+  font-display: swap;
+}
+
 .tmpl-hireme label {
   font-size: 0.8rem;
 }
