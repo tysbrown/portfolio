@@ -8,8 +8,7 @@ export default {
           {
             name: 'netlify',
             options: {
-              description:
-                'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
+              title: 'Netlify Builds',
               sites: [
                 {
                   buildHookId: '5fb8403dc92ebe20e905fa1e',
@@ -19,7 +18,7 @@ export default {
                 },
                 {
                   buildHookId: '5fb8403d4c0b4b26683ffbd7',
-                  title: 'Blog Website',
+                  title: '11ty Front-End',
                   name: 'portfolio-web-yszgpswz',
                   apiId: '76df53ec-3619-46e6-b46e-9f5f5ffdf9f3'
                 }
@@ -33,7 +32,7 @@ export default {
             value: 'https://github.com/tysbrown/portfolio',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://portfolio-web-yszgpswz.netlify.app', category: 'apps'}
+          {title: 'Frontend', value: 'https://www.tylerbrowndev.com', category: 'apps'}
         ]
       }
     },

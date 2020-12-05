@@ -2,6 +2,10 @@
   font-display: swap;
 }
 
+.about-section h1 {
+  padding: 20px 0 20px 0;
+}
+
 .tmpl-hireme label {
   font-size: 0.8rem;
 }
@@ -12,10 +16,6 @@
 
 .post-body img {
   max-width: 100%;
-}
-
-.about-section h1 {
-  margin-top: 50px;
 }
 
 :target::before {
