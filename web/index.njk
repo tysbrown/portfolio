@@ -29,7 +29,9 @@ eleventyNavigation:
   <div class="row mb-5">
     <div class="col-12 p-lg-0">
       <div class="border-bottom border-dark">
-        <h3 class="display-1"><a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="text-secondary">{{ portfolioProject.name }}</a></h3>
+        <h3 class="display-1">
+          <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="text-secondary project-header"><i class="fa fa-chevron-right display-4 mb-1 mr-3"></i>{{ portfolioProject.name }}</a>
+        </h3>
         <p class="my-5">{{ portfolioProject.stack }}</p>
         <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
           <div class="row mb-5">
