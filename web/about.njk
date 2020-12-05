@@ -7,21 +7,14 @@ eleventyNavigation:
 
 <div class="row mt-lg-7 mt-6">
   <div class="col-lg-9 pl-lg-0 pl-3 pr-lg-5 pr-3">
-    <h1 class="mb-5 display-3 text-primary">{{ about.title }}</h1>
-    <h2 class="mb-5 display-3">{{ about.header }}</h2>
-    <p class="mb-5">{{ about.subheader }}</p>
+    <h1 class="mb-lg-5 mb-4 display-3 text-primary">{{ about.title }}</h1>
+    <h2 class="mb-lg-5 mb-4 display-3">{{ about.header }}</h2>
+    <p class="subheader-wrapper">{{ about.subheader }}</p>
     <div class="about-section">
       {{ about.body | markdownify | safe }}
     </div>
   </div>
-  <div class="col-lg-3 border-left border-dark pl-lg-5 pl-3 pr-lg-0 pr-3 mt-lg-0 mt-5">
-    <h1>Skills and Tools</h1>
-    <ul>
-      {% set x = 0 %}
-      {% for skill in about.keywords %}
-      <li>{{ about.keywords[x] }}</li>
-      {% set x = x + 1 %}
-      {% endfor %}
-    </ul>
+  <div class="col-lg-3 pl-lg-5 pl-3 pr-lg-0 pr-3 mt-lg-0 mt-5 about-section">
+    {{ about.sidebar | markdownify | safe }}
   </div>
 </div>

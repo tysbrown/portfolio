@@ -8,7 +8,8 @@ const hasToken = !!client.config().token
 function generatePage (page) {
   return {
     ...page,
-    body: BlocksToMarkdown(page.body, { serializers, ...client.config() })
+    body: BlocksToMarkdown(page.body, { serializers, ...client.config() }),
+    sidebar: BlocksToMarkdown(page.sidebar, { serializers, ...client.config() })
   }
 }
 

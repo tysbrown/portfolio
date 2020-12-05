@@ -16,9 +16,11 @@ templateClass: tmpl-portfolio
     <h1 class="display-1" id="{{ portfolio.slug.current }}">{{ portfolio.name }}</h1>
   </div>
 </div>
-<div class="row my-5">
+<div class="row my-lg-5 my-4">
   <div class="col-12 px-lg-0 px-3">
-    {{ portfolio.stack }}
+    <div class="subheader-wrapper">
+      {{ portfolio.stack }}
+    </div>
   </div>
 </div>
 <div class="row mb-6">

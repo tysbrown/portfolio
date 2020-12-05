@@ -27,14 +27,9 @@ export default {
       title: 'Body'
     },
     {
-      name: 'keywords',
-      type: 'array',
-      title: 'Skills',
-      description: 'Add keywords that describes your skills.',
-      of: [{type: 'string'}],
-      options: {
-        layout: 'tags'
-      }
+      name: 'sidebar',
+      type: 'bodyPortableText',
+      title: 'Sidebar'
     }
   ]
 }

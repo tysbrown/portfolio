@@ -19,7 +19,7 @@ eleventyNavigation:
 
 <div class="row my-5">
   <div class="col-12 p-lg-0">
-    <span class="h1 text-primary">01 - Selected Works</span>
+    <h2 class="h1 text-primary">01 - Selected Works</h2>
   </div>
 </div>
 
@@ -29,7 +29,7 @@ eleventyNavigation:
   <div class="row mb-5">
     <div class="col-12 p-lg-0">
       <div class="border-bottom border-dark">
-        <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="h1 display-1 text-secondary">{{ portfolioProject.name }}</a>
+        <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse"><h3 class="display-1 text-secondary">{{ portfolioProject.name }}</h3></a>
         <p class="my-5">{{ portfolioProject.stack }}</p>
         <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
           <div class="row mb-5">
@@ -54,9 +54,9 @@ eleventyNavigation:
 </div>
 <!-- Selected Works Accordion End -->
 
-<div class="row mb-5 mt-lg-7 mt-6">
+<div class="row mb-5 mt-lg-8 mt-6 mb-5">
   <div class="col-12 p-lg-0">
-    <span class="h1 text-primary">02 - Recent Blog Posts</span>
+    <h2 class="h1 text-primary">02 - Recent Blog Posts</h2>
   </div>
 </div>
 
@@ -65,25 +65,25 @@ eleventyNavigation:
 {% for post in postslist | reverse %}
 {% if loop.index0 < 3 %}
 {% set currentPost = post.data.post %}
-<div class="row mt-lg-3 mt-5">
+<div class="row mt-lg-3">
   <div class="col-lg-3 p-lg-0">
     <a href="{{ post.url | url }}"><img src="{% croppedUrlFor currentPost.mainImage, 500, 400 %}" alt="{{ currentPost.mainImage.alt }}" width="100%"></a>
   </div>
   <div class="col-lg-9 mt-lg-0 mt-3 d-flex flex-column justify-content-center">
-    <h2>
-      <a href="{{ post.url | url }}" class="text-secondary">{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    </h2>
-    <time class="small font-weight-light" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
-    {{ currentPost.excerpt | markdownify | safe }}
-    <span>
+    <div class="blog-mobile-toggle">
+      <a href="{{ post.url | url }}" class="text-secondary"><h3>{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</h3></a>
+      <time class="small font-weight-light" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
+      {{ currentPost.excerpt | markdownify | safe }}
+      <span>
       <i class="fas fa-chevron-right mr-2"></i><a href="{{ post.url | url }}" class="text-uppercase">Read More</a>
     </span>
+    </div>
   </div>
 </div>
 {% endif %}
 {% endfor %}
 
-<div class="row mb-5 mt-lg-7 mt-6">
+<div class="row mb-5 mt-lg-8 mt-6">
   <div class="col-12 p-lg-0">
     <span class="h1 text-primary">03 - Get in Touch</span>
   </div>
@@ -97,10 +97,16 @@ eleventyNavigation:
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3 pl-md-0 pl-3">
-    <i class="fas fa-chevron-right mr-2"></i><a href="/hireme/" class="text-uppercase">Project Inquiries</a><br>
-    <i class="fas fa-chevron-right mr-2"></i><a href="mailto:hello@tylerbrowndev.com" class="text-uppercase">General Inquiries</a><br>
-    <i class="fas fa-chevron-right mr-2"></i><a href="https://github.com/tysbrown" class="text-uppercase">GitHub</a>
+  <div class="col-md-3 d-flex flex-column justify-content-center pl-md-0 pl-3">
+    <span>
+      <i class="fas fa-chevron-right mr-2"></i><a href="/hireme/" class="text-uppercase">Project Inquiries</a>
+    </span>
+    <span>
+      <i class="fas fa-chevron-right mr-2"></i><a href="mailto:hello@tylerbrowndev.com" class="text-uppercase">General Inquiries</a>
+    </span>
+    <span>
+      <i class="fas fa-chevron-right mr-2"></i><a href="https://github.com/tysbrown" class="text-uppercase">GitHub</a>
+    </span>
   </div>
   <div class="col-md-9 pr-md-0 pr-3 mt-md-0 mt-5 d-flex justify-content-center align-items-center border-toggle">
     <a href="mailto:hello@tylerbrowndev.com" class="h1 display-3 email-toggle" style="text-decoration: underline;">hello@tylerbrowndev.com</a>

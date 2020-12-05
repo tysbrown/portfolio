@@ -14,7 +14,7 @@ import about from "./documents/about";
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
+import sidebarPortableText from './objects/sidebarPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 
@@ -35,7 +35,7 @@ export default createSchema({
     category,
     mainImage,
     bodyPortableText,
-    bioPortableText,
+    sidebarPortableText,
     excerptPortableText
 
     // When added to this list, object types can be used as
