@@ -31,7 +31,8 @@
 
 @media (min-width: 992px) {
   .mr-lg-n200 {
-    margin-right: -200px;
+    margin-right: -170px;
+
   }
 }
 
@@ -95,11 +96,4 @@
     max-height: 1440px;
   }
 
-}
-
-
-@media (min-width: 768px) {
-  .border-toggle {
-    border-left: 2px solid #000;
-  }
 }
