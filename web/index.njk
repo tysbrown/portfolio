@@ -33,7 +33,7 @@ eleventyNavigation:
       {% for portfolioProject in index.selectedWorks %}
       <div class="accordion-item border-bottom border-dark">
         <div class="accordion-header" id="flush-headingOne">
-          <a class="accordion-button collapsed px-0" id="portfolioProject" type="button" data-bs-toggle="collapse" data-bs-target="#{{ portfolioProject.slug.current }}" aria-expanded="false" aria-controls="{{ portfolioProject.slug.current }}">
+          <a class="accordion-button collapsed px-0" id="portfolioProject" data-bs-toggle="collapse" type="button" data-bs-target="#{{ portfolioProject.slug.current }}" aria-expanded="false" aria-controls="{{ portfolioProject.slug.current }}">
             <div class="container-fluid px-0">
               <div class="row">
                 <div class="col-6 d-flex justify-content-start align-items-center">

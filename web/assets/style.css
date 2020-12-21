@@ -2,6 +2,11 @@
   font-display: swap;
 }
 
+.accordion-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 .scale-link:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
