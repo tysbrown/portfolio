@@ -23,6 +23,11 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("*.css");
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("node_modules/bootstrap/scss");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/aos/dist/aos.css": "assets/aos.css",
+    "node_modules/aos/dist/aos.js": "assets/aos.js"
+  });
 
   // https://www.11ty.io/docs/quicktips/inline-css/
   eleventyConfig.addFilter("cssmin", function(code) {

@@ -1,60 +1,42 @@
 // Custom Bootstrap SASS goes here
 
-$theme-colors: () !default;
-$theme-colors: map-merge(
-    (
-      "primary":    #826832,
-      "secondary":  #174036,
-//      "success":    $success,
-//      "info":       $info,
-//      "warning":    $warning,
-//      "danger":     $danger,
-      "light":      #E5E4DF,
-//      "dark":       $dark
-    ),
-    $theme-colors
-);
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1440px
-);
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1400px
-);
+$primary:       #826832;
+$secondary:     #38524F;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+$light:         #E5E4DF;
+$dark:          #000;
 
 $spacer: 1rem !default;
-$spacers: () !default;
-$spacers: map-merge(
-    (
-      0: 0,
-      1: ($spacer * .25),
-      2: ($spacer * .5),
-      3: $spacer,
-      4: ($spacer * 1.5),
-      5: ($spacer * 3),
-      6: ($spacer * 4),
-      7: ($spacer * 10),
-      8: ($spacer * 15)
-    ),
-    $spacers
-);
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: ($spacer * 4),
+  7: ($spacer * 10),
+  8: ($spacer * 15),
+  9: ($spacer * 20)
+) !default;
 
-$display2-size:               9rem;
-$display4-size:               2rem;
+$display-font-sizes: (
+  1: 7rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
 
 $body-bg:                   #E5E4DF;
 $body-color:                #000;
 $link-color:                #000;
+$link-decoration:           none;
 
 $border-width:                2px;
 
@@ -62,15 +44,24 @@ $headings-font-family:        kepler-std-display, serif;
 $headings-font-weight:        400;
 $headings-line-height:        1;
 $font-family-sans-serif:      poppins, sans-serif;
-
-$headings-color:              #174036;
+$headings-color:              #38524F;
 
 $enable-responsive-font-sizes:  true;
 
 $card-bg:                     #E5E4DF;
+$card-spacer-x:               5px;
+
 
 $input-bg:                    #D9D7D0;
 $input-border-width:          0;
 $input-btn-font-size:         0.8rem;
+
+$accordion-border-width:      none;
+$accordion-border-color:      #000;
+$accordion-button-active-bg:  none;
+$accordion-button-active-color: #000;
+$accordion-button-padding-y:    70px;
+$accordion-icon-width:          calc(14px + (48 - 14) * ((100vw - 300px) / (1600 - 300)));
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";

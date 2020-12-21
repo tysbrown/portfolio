@@ -19,11 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Added icons to project titles. Going to implement a vanilla javscript script that rotates it 90 degress on click.">
+    <list default="true" id="ebc9a667-3220-4a65-b87a-3d6a5582e7f3" name="Default Changelist" comment="Made some adjustments to the negative margin in homepgae header.&#10;Made post grid smaller.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/studio/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/studio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studio/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/studio/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.eleventy.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/.eleventy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_includes/layouts/base.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/_includes/layouts/base.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/_includes/layouts/navbar.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/_includes/layouts/navbar.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/_includes/layouts/post.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/_includes/layouts/post.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/about.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/about.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/archive.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/archive.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/hireme.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/hireme.njk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.njk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/portfolio.njk" beforeDir="false" afterPath="$PROJECT_DIR$/web/portfolio.njk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +106,13 @@
       <workItem from="1607137430412" duration="6390000" />
       <workItem from="1607152191818" duration="979000" />
       <workItem from="1607200415179" duration="4873000" />
-      <workItem from="1607210727328" duration="2357000" />
+      <workItem from="1607210727328" duration="2425000" />
+      <workItem from="1607550600592" duration="517000" />
+      <workItem from="1607562042520" duration="691000" />
+      <workItem from="1607736594166" duration="4751000" />
+      <workItem from="1607832031269" duration="27194000" />
+      <workItem from="1608324180478" duration="376000" />
+      <workItem from="1608456932305" duration="25045000" />
     </task>
     <task id="LOCAL-00001" summary="Installed Bootstrap locally and added CDN script for dependencies. Used CDN to take advantage of performance gains from browser caching.&#10;Created /assets directory in /includes and wrote a passthroughFileCopy for *.css in that directory, then created custom.scss with a watcher in WebStorm. Imported Bootstrap SASS files to custom.scss and used it to over-ride Bootstrap’s default SASS variables.&#10;Set up my Adobe Fonts project and added it to base.njk. I chose Kepler Std Display for headers and Poppins as the base font. Over-rode Bootstrap typography variables to get the fonts set up.&#10;Over-rode Bootstrap theme variables to change colors to my color scheme.&#10;Copy-pasted the 11ty starter’s postslist loop and modified it to only display the most recent 3 posts. Kept the original postslist for the blog page but replaced the link to it on the index page with my modified loop so that only the latest 3 posts would be displayed there.">
       <created>1605924637626</created>
@@ -310,11 +331,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607208175139</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Made some adjustments to the negative margin in homepgae header.&#10;Made post grid smaller.">
+      <created>1607213267865</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607213267865</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -354,12 +392,14 @@
     <MESSAGE value="Polished up all pages, changed padding, added blog-mobile-toggle to blog page and index page." />
     <MESSAGE value="Fixed bug causing weird underline issues in firefox." />
     <MESSAGE value="Added icons to project titles. Going to implement a vanilla javscript script that rotates it 90 degress on click." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added icons to project titles. Going to implement a vanilla javscript script that rotates it 90 degress on click." />
+    <MESSAGE value="Made some adjustments to the negative margin in homepgae header.&#10;Made post grid smaller." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some adjustments to the negative margin in homepgae header.&#10;Made post grid smaller." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605981166835">
-      <screen x="0" y="23" width="2048" height="1205" />
+    <state x="1037" y="475" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608251292098">
+      <screen x="0" y="23" width="3840" height="2062" />
     </state>
+    <state x="1037" y="475" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1608251292098" />
     <state x="553" y="287" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1205@0.23.2048.1205" timestamp="1605981166835" />
     <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605912013057">
       <screen x="0" y="23" width="3840" height="2137" />
@@ -374,6 +414,10 @@
       <screen x="0" y="23" width="3840" height="2137" />
     </state>
     <state x="2548" y="839" key="EditFileWatcherDialog/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1605911697824" />
+    <state x="0" y="23" key="FileDocumentManager.FileCacheConflict" timestamp="1608534010750">
+      <screen x="0" y="23" width="3840" height="2062" />
+    </state>
+    <state x="0" y="23" key="FileDocumentManager.FileCacheConflict/0.23.3840.2062@0.23.3840.2062" timestamp="1608534010750" />
     <state x="2702" y="961" key="Github.CreateGistDialog" timestamp="1606764243578">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
@@ -382,18 +426,22 @@
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="534" y="1004" key="SettingsEditor/0.23.3840.2062@0.23.3840.2062" timestamp="1606202869786" />
-    <state x="2340" y="780" key="Vcs.Push.Dialog.v2" timestamp="1607208176868">
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2" timestamp="1607213269343">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
     <state x="2480" y="793" key="Vcs.Push.Dialog.v2/-1440.1573.1440.900/0.0.3840.2160@0.0.3840.2160" timestamp="1606079121463" />
     <state x="2340" y="808" key="Vcs.Push.Dialog.v2/-1440.1596.1440.838/0.23.3840.2137@0.23.3840.2137" timestamp="1607008197067" />
     <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1607051685128" />
-    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-2048.1596.2048.1257/0.23.3840.2062@0.23.3840.2062" timestamp="1607055300821" />
+    <state x="2480" y="780" key="Vcs.Push.Dialog.v2/-2048.1596.2048.1257/0.23.3840.2062@0.23.3840.2062" timestamp="1607213269343" />
     <state x="1248" y="470" key="Vcs.Push.Dialog.v2/0.0.2048.1280@0.0.2048.1280" timestamp="1607153217196" />
     <state x="2340" y="780" key="Vcs.Push.Dialog.v2/0.23.3840.2062@0.23.3840.2062" timestamp="1607208176868" />
-    <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup" timestamp="1606195825049">
+    <state x="2697" y="974" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608251293564">
       <screen x="0" y="23" width="3840" height="2062" />
     </state>
-    <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup/0.23.3840.2062@0.23.3840.2062" timestamp="1606195825049" />
+    <state x="2697" y="974" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1440.1596.1440.877/0.23.3840.2062@0.23.3840.2062" timestamp="1608251293564" />
+    <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup" timestamp="1607737180692">
+      <screen x="0" y="23" width="3840" height="2062" />
+    </state>
+    <state x="2545" y="509" width="670" height="676" key="search.everywhere.popup/0.23.3840.2062@0.23.3840.2062" timestamp="1607737180692" />
   </component>
 </project>

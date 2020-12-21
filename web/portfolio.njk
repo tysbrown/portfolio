@@ -5,33 +5,37 @@ eleventyNavigation:
   order: 3
 templateClass: tmpl-portfolio
 ---
-<div class="row">
-  <div class="col-12 px-lg-0 px-3">
-    <h1 class="h1 mt-lg-7 mt-6 mb-5 display-3 text-primary">Portfolio</h1>
-  </div>
-</div>
-{% for portfolio in portfolio %}
-<div class="row">
-  <div class="col-12 px-lg-0 px-3">
-    <h1 class="display-1" id="{{ portfolio.slug.current }}">{{ portfolio.name }}</h1>
-  </div>
-</div>
-<div class="row my-lg-5 my-4">
-  <div class="col-12 px-lg-0 px-3">
-    <div class="subheader-wrapper">
-      {{ portfolio.stack }}
+<section class="container">
+  <div class="row">
+    <div class="col-12 px-lg-0 px-3">
+      <h1 class="h1 mt-lg-7 mt-6 mb-5 display-3 text-primary">Portfolio</h1>
     </div>
   </div>
-</div>
-<div class="row mb-6">
-  <div class="col-12 px-lg-0 px-3">
-    <div class="border-bottom border-dark pb-6">
-      <div class="d-flex justify-content-center w-100 mb-5">
-        <img src="{% imageUrlFor portfolio.image %}" alt="portfolio.image.alt" class="img-fluid">
+  {% for portfolio in portfolio %}
+  <div class="row">
+    <div class="col-12 px-lg-0 px-3">
+      <h1 class="display-1" id="{{ portfolio.slug.current }}">{{ portfolio.name }}</h1>
+    </div>
+  </div>
+  <div class="row my-lg-5 my-4">
+    <div class="col-12 px-lg-0 px-3">
+      <div class="subheader-wrapper">
+        {{ portfolio.stack }}
       </div>
-    <h2>Project Overview</h2>
-    {{ portfolio.body | markdownify | safe }}
     </div>
   </div>
-</div>
-{% endfor %}
+  <div class="row mb-6">
+    <div class="col-12 px-lg-0 px-3">
+      <div class="border-bottom border-dark pb-6">
+        <div class="d-flex justify-content-center w-100 mb-5">
+          <img src="{% imageUrlFor portfolio.image %}" alt="portfolio.image.alt" class="img-fluid">
+        </div>
+        <h2>Project Overview</h2>
+        {{ portfolio.body | markdownify | safe }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+

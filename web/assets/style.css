@@ -2,11 +2,69 @@
   font-display: swap;
 }
 
+.scale-link:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+svg#circle {
+  height: 250px;
+  width: 250px;
+}
+g circle {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  stroke-linecap: butt;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+g:hover circle {
+  fill: #E5E4DF;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 700;
+  stroke-width: 5;
+}
+text {
+  fill: #E5E4DF;
+  font-size: 24px;
+}
+a:hover text {
+  fill: #38524F;
+}
+
+.larger-font {
+  font-size: 1.5rem;
+}
+
+.header {
+  line-height: 0.9;
+}
+
 .navbar-toggler {
   border: none;
 }
 
 .about-section h1 {
+  padding: 20px 0 20px 0;
+}
+
+.about-sidebar h1 {
+  color: #826832;
+  padding: 20px 0 20px 0;
+}
+
+.about-sidebar h3 {
   padding: 20px 0 20px 0;
 }
 
@@ -31,8 +89,8 @@
 
 @media (min-width: 992px) {
   .mr-lg-n200 {
-    margin-right: -170px;
-
+    margin-right: -250px;
+    letter-spacing: 1px;
   }
 }
 
@@ -54,12 +112,12 @@
 
   .subheader-text {
     font-size: 1rem;
-    line-height: 1;
+    line-height: 1.2;
     z-index: 2;
   }
 
   .email-toggle {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
   }
 
   .home-subheader-wrapper {
@@ -86,6 +144,7 @@
 @media (min-width: 992px) {
   .subheader-text {
     font-size: 1.5rem;
+    font-weight: 300;
     line-height: 1.2;
     z-index: 2;
   }
@@ -96,4 +155,11 @@
     max-height: 1440px;
   }
 
+  .email-toggle {
+    font-size: 3rem;
+  }
+
+  .blog-card-group .card:nth-of-type(1), .card:nth-of-type(2) {     /* Adds margin to right of 1st and 2nd blog card. Required to work around bootstrap card class that negates margin-left value. */
+    margin-right: 10px;
+  }
 }

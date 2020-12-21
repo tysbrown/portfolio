@@ -4,17 +4,20 @@ eleventyNavigation:
   key: About
   order: 2
 ---
-
-<div class="row mt-lg-7 mt-6">
-  <div class="col-lg-9 pl-lg-0 pl-3 pr-lg-5 pr-3">
-    <h1 class="mb-lg-5 mb-4 display-3 text-primary">{{ about.title }}</h1>
-    <h2 class="mb-lg-5 mb-4 display-3">{{ about.header }}</h2>
-    <p class="subheader-wrapper">{{ about.subheader }}</p>
-    <div class="about-section">
-      {{ about.body | markdownify | safe }}
+<section class="container">
+  <div class="row mt-lg-7 mt-6">
+    <div class="col-lg-9 ps-lg-0 ps-3 pe-lg-5 pe-3">
+      <h1 class="mb-lg-5 mb-4 display-3 text-primary">{{ about.title }}</h1>
+      <h2 class="mb-lg-5 mb-4 display-3">{{ about.header }}</h2>
+      <p class="subheader-wrapper">{{ about.subheader }}</p>
+      <div class="about-section">
+        {{ about.body | markdownify | safe }}
+      </div>
+    </div>
+    <div class="col-lg-3 ps-lg-5 ps-3 pe-lg-0 pe-3 mt-lg-0 mt-5 about-sidebar">
+      {{ about.sidebar | markdownify | safe }}
     </div>
   </div>
-  <div class="col-lg-3 pl-lg-5 pl-3 pr-lg-0 pr-3 mt-lg-0 mt-5 about-section">
-    {{ about.sidebar | markdownify | safe }}
-  </div>
-</div>
+</section>
+
+

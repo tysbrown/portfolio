@@ -4,113 +4,141 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<div class="row banner">
-  <div class="col-lg-7 p-lg-0 d-flex flex-column justify-content-center" style="z-index: 2;">
-    <span class="h1 text-primary mt-lg-0 mt-6">Hello</span>
-    <h1 class="display-3 my-lg-5 my-4 mr-lg-n200 header-toggle">{{ index.header }}</h1>
-    <div class="home-subheader-wrapper mb-lg-0 mb-4">
-      <p class="font-weight-light subheader-text">{{ index.subheader }}</p>
+<!-- Header Section -->
+<header class="container-fluid px-lg-7 px-1">
+  <div class="row banner">
+    <div class="col-lg-7 p-lg-0 d-flex flex-column justify-content-center" style="z-index: 2;">
+      <span class="h1 text-primary mt-lg-0 mt-6">Hello</span>
+      <h1 class="display-2 my-lg-5 my-4 mr-lg-n200 header-toggle header">{{ index.header }}</h1>
+      <div class="home-subheader-wrapper me-lg-3 mb-lg-0 mb-4">
+        <p class="subheader-text">{{ index.subheader }}</p>
+      </div>
+    </div>
+    <div class="col-lg-5 px-lg-0 px-3 d-flex flex-lg-row align-items-center flex-column">
+      <img src="{% imageUrlFor index.image %}" alt="{{ index.image.alt }}" class="img-fluid w-100 rounded">
     </div>
   </div>
-  <div class="col-lg-5 px-lg-0 px-3 d-flex flex-lg-row align-items-center flex-column">
-    <img src="{% imageUrlFor index.image %}" alt="{{ index.image.alt }}" class="img-fluid w-100">
-  </div>
-</div>
-
-<div class="row my-5">
-  <div class="col-12 p-lg-0">
-    <h2 class="h1 text-primary">01 - Selected Works</h2>
-  </div>
-</div>
+</header>
+<!-- End Header Section -->
 
 <!-- Selected Works Accordion -->
-<div class="accordion" id="portfolioAccordion">
-  {% for portfolioProject in index.selectedWorks %}
-  <div class="row mb-5">
+<section class="container-fluid px-lg-7 px-1">
+  <div class="row mt-6 mb-0">
     <div class="col-12 p-lg-0">
-      <div class="border-bottom border-dark">
-        <h3 class="display-1">
-          <a href="#{{ portfolioProject.slug.current }}" data-toggle="collapse" class="text-secondary project-header"><i class="fa fa-chevron-right display-4 mb-1 mr-3"></i>{{ portfolioProject.name }}</a>
-        </h3>
-        <p class="my-5">{{ portfolioProject.stack }}</p>
-        <div class="collapse container-fluid" id="{{ portfolioProject.slug.current }}" data-parent="#portfolioAccordion">
-          <div class="row mb-5">
+      <h2 class="h4 text-primary"><span class="me-5">(01)</span> Selected Works</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="accordion accordion-flush px-lg-0 px-3" id="portfolioAccordion">
+      {% for portfolioProject in index.selectedWorks %}
+      <div class="accordion-item border-bottom border-dark">
+        <div class="accordion-header" id="flush-headingOne">
+          <a class="accordion-button collapsed px-0" id="portfolioProject" type="button" data-bs-toggle="collapse" data-bs-target="#{{ portfolioProject.slug.current }}" aria-expanded="false" aria-controls="{{ portfolioProject.slug.current }}">
+            <div class="container-fluid px-0">
+              <div class="row">
+                <div class="col-6 d-flex justify-content-start align-items-center">
+                  <h3 class="display-1">No. 0{{ loop.index }}</h3>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-end">
+                  <span class="larger-font text-uppercase me-lg-8">{{ portfolioProject.name }}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div id="{{ portfolioProject.slug.current }}" class="accordion-collapse collapse" aria-labelledby="{{ portfolioProject.slug.current }}" data-bs-parent="#portfolioAccordion">
+          <div class="row accordion-body">
             <div class="col-lg-4 px-0">
               <a href="/portfolio/#{{ portfolioProject.slug.current }}"><img src="{% imageUrlFor portfolioProject.image, 700 %}" alt="{{ portfolioProject.image.alt }}" width="100%"></a>
             </div>
             <div class="col-lg-8 d-flex flex-column justify-content-center px-lg-3 px-0 mt-lg-0 mt-5">
               <h2>Project Overview</h2>
+              <small class="text-secondary">{{ portfolioProject.stack }}</small>
               <p>
                 {{ portfolioProject.projectExcerpt }}
               </p>
               <span>
-              <i class="fas fa-chevron-right mr-2"></i><a href="/portfolio/#{{ portfolioProject.slug.current }}" class="text-uppercase">Read More</a>
-            </span>
+                <i class="fas fa-chevron-right me-2"></i><a href="/portfolio/#{{ portfolioProject.slug.current }}" class="text-uppercase">Read More</a>
+              </span>
             </div>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
-</div>
-<!-- Selected Works Accordion End -->
+<!-- End Selected Works -->
+</section>
 
-<div class="row mb-5 mt-lg-8 mt-6 mb-5">
-  <div class="col-12 p-lg-0">
-    <h2 class="h1 text-primary">02 - Recent Blog Posts</h2>
-  </div>
-</div>
-
-<!-- Loops through first 3 iterations of postslist to display 3 most recent blog posts -->
-{% set postslist = collections.myPosts %}
-{% for post in postslist | reverse %}
-{% if loop.index0 < 3 %}
-{% set currentPost = post.data.post %}
-<div class="row mt-lg-3">
-  <div class="col-lg-3 p-lg-0">
-    <a href="{{ post.url | url }}"><img src="{% croppedUrlFor currentPost.mainImage, 500, 400 %}" alt="{{ currentPost.mainImage.alt }}" width="100%"></a>
-  </div>
-  <div class="col-lg-9 mt-lg-0 mt-3 d-flex flex-column justify-content-center">
-    <div class="blog-mobile-toggle">
-      <a href="{{ post.url | url }}" class="text-secondary"><h3>{% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</h3></a>
-      <time class="small font-weight-light" datetime="{{ currentPost.publishedAt }}">{{ currentPost.publishedAt|readableDate }}</time>
-      {{ currentPost.excerpt | markdownify | safe }}
-      <span>
-      <i class="fas fa-chevron-right mr-2"></i><a href="{{ post.url | url }}" class="text-uppercase">Read More</a>
-    </span>
+<!-- Recent Blog Posts Loop -->
+<section class="container-fluid px-lg-7 px-1">
+  <div class="row mb-lg-5 mb-3 mt-lg-8 mt-6">
+    <div class="col-12 p-lg-0">
+      <h2 class="h4 text-primary"><span class="me-5">(02)</span> Recent Blog Posts</h2>
     </div>
   </div>
-</div>
-{% endif %}
-{% endfor %}
-
-<div class="row mb-5 mt-lg-8 mt-6">
-  <div class="col-12 p-lg-0">
-    <span class="h1 text-primary">03 - Get in Touch</span>
+  <div class="row row-cols-lg-3 row-cols-1">
+    <!-- Loops through first 3 iterations of postslist to display 3 most recent blog posts -->
+    {% set postslist = collections.myPosts %}
+    {% for post in postslist | reverse %}
+    {% if loop.index0 < 3 %}
+    {% set currentPost = post.data.post %}
+    {% set delayCounter = loop.index0 %}
+    <div class="col mt-lg-0 mt-5">
+      <div class="card h-100 border-dark">
+        <a href="{{ post.url | url }}"><img src="{% croppedUrlFor currentPost.mainImage, 400, 200 %}" alt="{{ currentPost.mainImage.alt }}" width="100%" class="card-img-top"></a>
+        <div class="card-body">
+          <a href="{{ post.url | url }}"><p class="card-title text-uppercase">
+            {% if currentPost.title %}{{ currentPost.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+          </p></a>
+          <time class="small font-weight-light text-secondary" datetime="{{ currentPost.publishedAt }}">
+            {{ currentPost.publishedAt|readableDate }}
+          </time>
+          <p class="card-text"><small>{{ currentPost.excerpt | markdownify | safe }}</small></p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
   </div>
-</div>
+</section>
+<!-- End Recent Blog Posts Loop -->
 
-<div class="row my-5">
-  <div class="col-12 px-lg-0 px-3">
-    <div class="border-bottom border-dark pb-5">
-    <p class="h1 display-1 text-secondary">Want to start a web project? I'd love to hear from you.</p>
+<!-- Get In Touch Section -->
+<section class="container-fluid px-lg-7 px-1">
+  <div class="row mb-5 mt-lg-8 mt-6">
+    <div class="col-12 p-lg-0">
+      <span class="h4 text-primary"><span class="me-5">(03)</span> Get in Touch</span>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-3 d-flex flex-column justify-content-center pl-md-0 pl-3">
-    <span>
-      <i class="fas fa-chevron-right mr-2"></i><a href="/hireme/" class="text-uppercase">Project Inquiries</a>
-    </span>
-    <span>
-      <i class="fas fa-chevron-right mr-2"></i><a href="mailto:hello@tylerbrowndev.com" class="text-uppercase">General Inquiries</a>
-    </span>
-    <span>
-      <i class="fas fa-chevron-right mr-2"></i><a href="https://github.com/tysbrown" class="text-uppercase">GitHub</a>
-    </span>
+  <div class="row my-5">
+    <div class="col-12 px-lg-0 px-3">
+      <p class="h1 display-1 text-secondary">Let's build something extraordinary.</p>
+    </div>
   </div>
-  <div class="col-md-9 pr-md-0 pr-3 mt-md-0 mt-5 d-flex justify-content-lg-end justify-content-center align-items-center">
-    <a href="mailto:hello@tylerbrowndev.com" class="h1 display-3 email-toggle" style="text-decoration: underline;">hello@tylerbrowndev.com</a>
+  <div class="row border-top border-bottom border-dark mx-lg-0 mx-1 pt-5 pb-5">
+    <div class="col-md-4 ps-md-0">
+      <svg id="circle">
+        <g>
+          <a xlink:href="/hireme/">
+          <circle cx="125" cy="125" r="100" stroke="#38524F" stroke-width="1" fill="#38524F" />
+            <text x="50%" y="52%" style="text-anchor: middle">HIRE ME</text>
+          </a>
+        </g>
+      </svg>
+    </div>
+    <div class="col-md-4 d-flex flex-column align-items-lg-start align-items-end p-4">
+      <a href="https://github.com/tysbrown" class="larger-font text-uppercase scale-link">GitHub</a>
+      <a href="https://codepen.com/tysbrown" class="larger-font text-uppercase scale-link">CodePen</a>
+      <a href="https://linkedin.com/tysbrown" class="larger-font text-uppercase scale-link">LinkedIn</a>
+      <a href="https://instagram.com/tysbrown" class="larger-font text-uppercase scale-link">Instagram</a>
+    </div>
+    <div class="col-md-4 pe-md-0 pe-3 p-4 mt-md-0 mt-5 d-flex flex-column align-items-lg-start align-items-end ">
+      <span class="text-uppercase larger-font mb-4">
+        Currently <span class="text-secondary" style="font-weight: 700;">available</span> for web projects and full-time employment.
+      </span>
+      <a href="mailto:hello@tylerbrowndev.com" class="text-uppercase larger-font scale-link mt-md-0 mt-5">hello@tylerbrowndev.com</a>
+    </div>
   </div>
-</div>
+</section>
+<!-- End Get In Touch Section -->
